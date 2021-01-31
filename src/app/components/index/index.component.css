@@ -1,0 +1,69 @@
+mat-grid-tile {
+    background: #b6b8c3;
+    height: 200px !important;
+  }
+  .mat-grid-tile{
+  }
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  .mat-card-image{
+      height: 50%;
+      width: 80%;margin-left: 1%;
+  }
+  .mat-card-header{
+      background: #283593;
+      color: white;
+      max-height: 70px !important;
+      height: 70px !important;
+      width: 100%;
+  }
+  .example-card{
+      height: 90%;
+      width: 80%;
+  }
+  .mat-icon {
+    font-size: 50px;
+    }
+
+.example-form{
+    margin-top: 2%;
+    margin-left: 30%;
+}    
+.example-full-width {
+        width: 50%;
+ }
+ .searcher{
+     margin-top: 2%;
+     margin-bottom: 5%;
+     margin-left: 30%;
+     margin-right: 30%;
+ }
+ .mat-icon{
+     float: left;
+     margin-right: 30px;
+ }
+ button{
+     margin-left: 5px;
+     background: #1A237E;
+     color:white;
+ }
+ .input{
+     position: center;
+     color:gray
+ }
+ .mat-card-title{
+     margin-top: 2%;
+     margin-left: -17%;
+     width: 100%;
+     font-size: medium;
+ }
+ .mat-card-subtitle{
+     color: white;
+     font-size: small;
+ }
+ 

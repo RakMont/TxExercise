@@ -1,0 +1,26 @@
+
+<app-searcher (search)="handleSearch($event)"></app-searcher>
+
+<div>
+    <mat-grid-list  cols="4" #grid rowHeight="1:1" >
+      <mat-grid-tile *ngFor="let hvt of songs2">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{hvt.trackName}}</mat-card-title>
+              <mat-card-subtitle>{{hvt.artistName}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="hvt.artworkUrl100">
+            <mat-card-content>
+              <p>
+                {{hvt.collectionName}}</p>
+                <li>{{hvt.trackTimeMillis}}</li>
+                <li>{{hvt.trackPrice}}</li>
+            </mat-card-content>
+            
+          </mat-card>      
+    </mat-grid-tile>
+    </mat-grid-list>
+
+</div>
+
