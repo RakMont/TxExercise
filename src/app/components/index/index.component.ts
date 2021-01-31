@@ -23,45 +23,18 @@ export class IndexComponent implements OnInit {
   //search = "";
   //girdlist:MatGridListModule;
   @ViewChild('grid') grid!: MatGridListModule;
-  gridByBreakpoint = {
-    xl: 8,
-    lg: 6,
-    md: 4,
-    sm: 2,
-    xs: 1
-  }
   constructor(private observableMedia: MediaObserver,public service:SongService,
     private _http:HttpClient
     ) {}
   handleSearch(value:string){
-    this.service.search(value)
+    this.service.getSongs(value)
       .subscribe((res) => {
         this.songs2 = JSON.parse(JSON.stringify(res)).results;
       });
-      //console.log('songs2'+this.songs2)
   }
-  /*
-  ngAfterContentInit() {
-    this.observableMedia.asObservable().subscribe((change: MediaChange) => {
-      this.grid.cols = this.gridByBreakpoint[change.mqAlias];
-    });
-  }*/
+  
   ngOnInit(): void {
     //this._http.get('https://jsonplaceholder.typicode.com/users').subscribe((data:any) => this.songs=data)
   }
- /* onSubmit(form:NgForm){
-    
-    this.service.getSongs(form.value).subscribe(data =>{
-      this.historiasHVT = data;
-      console.log("thos is"+data + "o"+ form.value)
-      if(this.historiasHVT[0]!=null){
-       this.existelist=true;
-     }
-     
-  
-    })
-  
-  
-  }
-*/
+ 
 }

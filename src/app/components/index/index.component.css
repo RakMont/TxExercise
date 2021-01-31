@@ -1,31 +1,36 @@
 mat-grid-tile {
-    background: #b6b8c3;
+    /*background: #b6b8c3;*/
     height: 200px !important;
   }
-  .mat-grid-tile{
+  .mat-grid-list{
+      margin-top: 3%;
   }
   .example-card {
     max-width: 400px;
+    padding: 0%;
+    height: 90%;
+      width: 80%;
   }
-  
-  .example-header-image {
-    background-size: cover;
+  .header{
+      width: 100%;
+      max-width: 100%;
+      background-color: #283593;
   }
   .mat-card-image{
-      height: 50%;
-      width: 80%;margin-left: 1%;
+      height: 55%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
   }
   .mat-card-header{
       background: #283593;
       color: white;
       max-height: 70px !important;
-      height: 70px !important;
+      height: 65px !important;
       width: 100%;
+      max-width: 100%;
   }
-  .example-card{
-      height: 90%;
-      width: 80%;
-  }
+  
   .mat-icon {
     font-size: 50px;
     }
@@ -43,18 +48,10 @@ mat-grid-tile {
      margin-left: 30%;
      margin-right: 30%;
  }
- .mat-icon{
-     float: left;
-     margin-right: 30px;
- }
- button{
-     margin-left: 5px;
-     background: #1A237E;
-     color:white;
- }
+ 
+ 
  .input{
      position: center;
-     color:gray
  }
  .mat-card-title{
      margin-top: 2%;
@@ -65,5 +62,16 @@ mat-grid-tile {
  .mat-card-subtitle{
      color: white;
      font-size: small;
+     margin-left: -17%;
+     width: 100%;
+ }
+ .mat-card-content{
+     margin-top: -5%;
+     margin-left: 5%;
+     margin-right: 5%;
+     max-height: 30%;
+     height: 30%;
+     font-size: small;
+     margin-bottom: 1%;
  }
  

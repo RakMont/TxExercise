@@ -20,6 +20,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearcherComponent } from './components/searcher/searcher.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SearcherComponent } from './components/searcher/searcher.component';
     MatDialogModule,
     MatIconModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
