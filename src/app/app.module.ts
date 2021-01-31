@@ -10,7 +10,6 @@ import { IndexComponent } from './components/index/index.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-//import { Song } from './models/song';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatInputModule} from '@angular/material/input';
@@ -21,7 +20,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearcherComponent } from './components/searcher/searcher.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +43,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatIconModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

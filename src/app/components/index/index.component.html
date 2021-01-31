@@ -2,10 +2,13 @@
 <app-searcher (search)="handleSearch($event)"></app-searcher>
 
 <div>
-    
+    <mat-paginator [length]="songs.length"
+    [pageSize]="size"
+    (page)="getData($event)">
+</mat-paginator>
     <mat-grid-list  cols="4" #grid rowHeight="1:1" >
-        
-      <mat-grid-tile *ngFor="let hvt of songs2">
+        <div> 
+      <mat-grid-tile *ngFor="let hvt of songs">
         
         <mat-card class="example-card">
             <mat-card-header>
@@ -15,8 +18,7 @@
             </mat-card-header>
             <img mat-card-image [src]="hvt.artworkUrl100">
             <mat-card-content>
-              <p>
-                Album: {{hvt.collectionName}}</p>
+              <li> Album: {{hvt.collectionName}}</li>
                 <li>Time: {{hvt.trackTimeMillis}}</li>
                 <li>Price :{{hvt.trackPrice}}</li>
             </mat-card-content>
@@ -24,8 +26,8 @@
           </mat-card> 
              
     </mat-grid-tile>
-
-    </mat-grid-list>
-
+</div>   
+</mat-grid-list>
+    
 </div>
 

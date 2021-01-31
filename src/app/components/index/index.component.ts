@@ -16,11 +16,15 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 })
 export class IndexComponent implements OnInit {
   
-  //songs:Song[]=[];
+  songs:Song[]=[];
   songs2:any;
-  songs=[]
+  //songs=[]
+  page = 0;
+  size = 4;
+  breakpoint: number = 4;
+  length: number = 0;
+  pageSize: number = 3;
   existelist=false;
-  //search = "";
   //girdlist:MatGridListModule;
   @ViewChild('grid') grid!: MatGridListModule;
   constructor(private observableMedia: MediaObserver,public service:SongService,
@@ -29,12 +33,24 @@ export class IndexComponent implements OnInit {
   handleSearch(value:string){
     this.service.getSongs(value)
       .subscribe((res) => {
-        this.songs2 = JSON.parse(JSON.stringify(res)).results;
+        this.songs = JSON.parse(JSON.stringify(res)).results;
       });
-  }
+      this.songs.sort((a, b) => (a.trackName < b.trackName ? -1 : 1));
+  } 
   
-  ngOnInit(): void {
-    //this._http.get('https://jsonplaceholder.typicode.com/users').subscribe((data:any) => this.songs=data)
-  }
  
+  ngOnInit(): void {
+    this.getData({pageIndex: this.page, pageSize: this.size});
+  }
+
+  getData(obj:any) {
+    let index=0,
+        startingIndex=obj.pageIndex * obj.pageSize,
+        endingIndex=startingIndex + obj.pageSize;
+
+    this.songs = this.songs.filter(() => {
+      index++;
+      return (index > startingIndex && index <= endingIndex) ? true : false;
+    });
+  }
 }

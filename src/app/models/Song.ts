@@ -1,5 +1,5 @@
 export interface Song{
-    song_image:String;
+    artworkUrl100:String;
     trackName:String;
     artistName:String;
     collectionName:String;

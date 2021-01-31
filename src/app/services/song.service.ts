@@ -13,7 +13,7 @@ export class SongService {
   constructor(private http: HttpClient) { }
   Url = ' https://itunes.apple.com/search?term=';
   getSongs(search:String) {
-    return this.http.get(this.Url+search+'&kind=song'+'&enitity=album');
+    return this.http.get(this.Url+search+'&kind=song'+'&enitity=album&limit=25');
   }
   /*search(search:String){
     return this.http.get(this.Url+search+'&kind=song'+'&enitity=album');
